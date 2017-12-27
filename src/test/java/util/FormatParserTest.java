@@ -3,6 +3,9 @@ package test.java.util;
 import main.java.util.FormatParser;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.function.Executable;
+
+import java.math.BigDecimal;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.Month;
 import java.time.format.DateTimeParseException;
@@ -25,6 +28,26 @@ public class FormatParserTest {
         }
     }
 
+    @Test
+    public void testPositiveParseToLocalDate(){
+        Object[][] params = new Object[][]{{"1999-11-11", LocalDate.of(1999, Month.NOVEMBER, 11)},
+                                          {"2020-05-31", LocalDate.of(2020, Month.MAY, 31)}};
+        for(Object[] tmp : params){
+            LocalDate res = FormatParser.parseToLocalDate(tmp[0].toString());
+            assertEquals(res, tmp[1]);
+        }
+    }
+
+    @Test
+    public void testPositiveParseToBigDecimal(){
+        Object[][] params = new Object[][]{{"67.83", BigDecimal.valueOf(67.83)},
+                                            {"20", BigDecimal.valueOf(20)},
+                                            {"85.6", BigDecimal.valueOf(85.6)}};
+        for(Object[] tmp : params){
+            BigDecimal res = FormatParser.parseToBigDecimal(tmp[0].toString());
+            assertEquals(res, tmp[1]);
+        }
+    }
 
     @Test
     public void testNegativeParseToLocalDateTime(){

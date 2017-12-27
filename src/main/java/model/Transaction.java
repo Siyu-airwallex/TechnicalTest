@@ -49,4 +49,13 @@ public class Transaction {
                 ", paymentAmount=" + paymentAmount +
                 '}';
     }
+
+    @Override
+    public boolean equals(Object other){
+        if(other == null || !(other instanceof Transaction)) return false;
+        Transaction that = (Transaction) other;
+        return this.getHashedCardNumber().equals(that.getHashedCardNumber())
+                        && this.getTimestamp().equals(that.getTimestamp())
+                            && this.paymentAmount.equals(that.paymentAmount);
+    }
 }
