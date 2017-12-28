@@ -1,6 +1,6 @@
-package main.java.core;
+package core;
 
-import main.java.model.Transaction;
+import model.Transaction;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.util.HashMap;

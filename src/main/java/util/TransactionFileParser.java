@@ -1,6 +1,6 @@
-package main.java.util;
+package util;
 
-import main.java.model.Transaction;
+import model.Transaction;
 import java.io.IOException;
 import java.math.BigDecimal;
 import java.nio.file.Files;
@@ -8,8 +8,8 @@ import java.nio.file.Paths;
 import java.time.LocalDateTime;
 import java.util.List;
 import java.util.stream.Collectors;
-import static main.java.util.FormatParser.parseToBigDecimal;
-import static main.java.util.FormatParser.parseToLocalDateTime;
+import static util.FormatParser.parseToBigDecimal;
+import static util.FormatParser.parseToLocalDateTime;
 
 /**
  * Created by charlie on 23/12/17.

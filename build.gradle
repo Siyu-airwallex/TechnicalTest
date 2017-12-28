@@ -1,0 +1,10 @@
+apply plugin: 'idea'
+apply plugin: 'java'
+
+
+
+repositories {
+    maven {
+        url("https://plugins.gradle.org/m2/")
+    }
+}

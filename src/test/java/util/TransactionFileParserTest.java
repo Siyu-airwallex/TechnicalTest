@@ -1,15 +1,14 @@
-package test.java.util;
+package util;
 
-import main.java.model.Transaction;
-import main.java.util.FormatParser;
-import main.java.util.TransactionFileParser;
+
+import model.Transaction;
 import org.junit.jupiter.api.Test;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
-import java.time.Month;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+
 
 /**
  * Created by charlie on 27/12/17.

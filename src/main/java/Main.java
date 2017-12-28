@@ -1,14 +1,13 @@
-package main.java;
-
-import main.java.model.Transaction;
+import model.Transaction;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.util.List;
 import java.util.Scanner;
-import static main.java.core.TransactionValidator.detectFraudCreditCards;
-import static main.java.util.FormatParser.parseToBigDecimal;
-import static main.java.util.FormatParser.parseToLocalDate;
-import static main.java.util.TransactionFileParser.parseFile;
+import static core.TransactionValidator.detectFraudCreditCards;
+import static util.FormatParser.parseToBigDecimal;
+import static util.FormatParser.parseToLocalDate;
+import static util.TransactionFileParser.parseFile;
+
 
 public class Main {
 
