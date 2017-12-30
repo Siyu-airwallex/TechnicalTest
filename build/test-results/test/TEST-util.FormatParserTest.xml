@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="util.FormatParserTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2017-12-30T05:30:47" hostname="Siyus-MacBook-Pro-3.local" time="0.003">
+  <properties/>
+  <testcase name="testPositiveParseToLocalDateTime" classname="util.FormatParserTest" time="0.001"/>
+  <testcase name="testNegativeParseToBigDeciaml" classname="util.FormatParserTest" time="0.001"/>
+  <testcase name="testPositiveParseToLocalDate" classname="util.FormatParserTest" time="0.0"/>
+  <testcase name="testPositiveParseToBigDecimal" classname="util.FormatParserTest" time="0.0"/>
+  <testcase name="testNegativeParseToLocalDateTime" classname="util.FormatParserTest" time="0.001"/>
+  <testcase name="testNegativeParseToLocalDate" classname="util.FormatParserTest" time="0.0"/>
+  <system-out><![CDATA[price '67F' format error, make sure follow the pattern 'dollars.cents'
+timestamp '1980-09-25F23:45:25' format error, make sure follow the pattern yyyy-MM-dd'T'HH:mm:ss
+given date '1980-09-32' format error, make sure follow the pattern 'yyyy-MM-dd'
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

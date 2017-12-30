@@ -1,13 +1,13 @@
 package util;
-import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.function.Executable;
+
+import org.junit.Rule;
+import org.junit.Test;
+import org.junit.contrib.java.lang.system.ExpectedSystemExit;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.Month;
-import java.time.format.DateTimeParseException;
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.Assert.assertEquals;
 
 
 /**
@@ -15,6 +15,9 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
  */
 
 public class FormatParserTest {
+
+    @Rule
+    public final ExpectedSystemExit exit = ExpectedSystemExit.none();
 
     @Test
     public void testPositiveParseToLocalDateTime(){
@@ -27,12 +30,30 @@ public class FormatParserTest {
     }
 
     @Test
+    public void testNegativeParseToLocalDateTime(){
+        String[] params = new String[]{"1980-09-25F23:45:25", "2008-12-32T01:00:30","2018 12 31T01:00:30" };
+        for(String tmp : params){
+            exit.expectSystemExitWithStatus(-1);
+            FormatParser.parseToLocalDateTime(tmp);
+        }
+    }
+
+    @Test
     public void testPositiveParseToLocalDate(){
         Object[][] params = new Object[][]{{"1999-11-11", LocalDate.of(1999, Month.NOVEMBER, 11)},
                                           {"2020-05-31", LocalDate.of(2020, Month.MAY, 31)}};
         for(Object[] tmp : params){
             LocalDate res = FormatParser.parseToLocalDate(tmp[0].toString());
             assertEquals(res, tmp[1]);
+        }
+    }
+
+    @Test
+    public void testNegativeParseToLocalDate(){
+        String[] params = new String[]{"1980-09-32", "2008 12 32","2018.12.31" };
+        for(String tmp : params){
+            exit.expectSystemExitWithStatus(-1);
+            FormatParser.parseToLocalDate(tmp);
         }
     }
 
@@ -48,14 +69,11 @@ public class FormatParserTest {
     }
 
     @Test
-    public void testNegativeParseToLocalDateTime(){
-        String[] params = new String[]{"1980-09-25F23:45:25", "2008-12-32T01:00:30","2018 12 31T01:00:30" };
+    public void testNegativeParseToBigDeciaml(){
+        String[] params = new String[]{"67F", "sfsf", "  " };
         for(String tmp : params){
-            Executable parseExep = () -> FormatParser.parseToLocalDateTime(tmp);
-            Throwable excepton = assertThrows(DateTimeParseException.class, parseExep);
-            System.out.println(excepton.getMessage());
+            exit.expectSystemExitWithStatus(-1);
+            FormatParser.parseToBigDecimal(tmp);
         }
     }
-
-
 }

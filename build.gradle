@@ -4,7 +4,15 @@ apply plugin: 'java'
 
 
 repositories {
-    maven {
-        url("https://plugins.gradle.org/m2/")
-    }
+    mavenCentral()
 }
+
+
+dependencies{
+    testCompile (
+        'junit:junit:4.12',
+        'junit-addons:junit-addons:1.4',
+        'com.github.stefanbirkner:system-rules:1.16.0'
+    )
+}
+
