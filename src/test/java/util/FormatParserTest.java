@@ -8,8 +8,6 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.Month;
 import static org.junit.Assert.assertEquals;
-
-
 /**
  * Created by charlie on 26/12/17.
  */

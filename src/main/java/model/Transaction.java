@@ -5,6 +5,7 @@ import java.time.LocalDateTime;
 /**
  * Created by charlie on 23/12/17.
  */
+
 public class Transaction {
 
     private String hashedCardNumber;

@@ -1,17 +1,12 @@
 package util;
 
-
 import model.Transaction;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.contrib.java.lang.system.ExpectedSystemExit;
-
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
-
 import static org.junit.Assert.assertEquals;
-
-
 /**
  * Created by charlie on 27/12/17.
  */

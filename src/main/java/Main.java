@@ -8,7 +8,6 @@ import static util.FormatParser.parseToBigDecimal;
 import static util.FormatParser.parseToLocalDate;
 import static util.TransactionFileParser.parseFile;
 
-
 public class Main {
 
     public static void main(String[] args) {

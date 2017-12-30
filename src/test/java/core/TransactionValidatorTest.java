@@ -2,20 +2,16 @@ package core;
 
 import junitx.framework.ListAssert;
 import model.Transaction;
-import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
-
 import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
-
 import static core.TransactionValidator.detectFraudCreditCards;
-
 /**
  * Created by charlie on 28/12/17.
  */
