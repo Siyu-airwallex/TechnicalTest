@@ -1,12 +1,35 @@
 apply plugin: 'idea'
 apply plugin: 'java'
 
+sourceSets {
+    main {
+        java {
+            srcDir 'src/main/java'
+        }
+        resources{
+            srcDir 'src/main/resources'
+        }
+    }
 
+    test {
+        java {
+            srcDir  'src/test/java'
+        }
+    }
+}
 
 repositories {
     mavenCentral()
 }
 
+
+jar {
+    manifest {
+        attributes(
+                'Main-Class': 'Main'
+        )
+    }
+}
 
 dependencies{
     testCompile (

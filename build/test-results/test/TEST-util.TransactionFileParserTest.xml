@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="util.TransactionFileParserTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2017-12-30T05:30:47" hostname="Siyus-MacBook-Pro-3.local" time="0.001">
+<testsuite name="util.TransactionFileParserTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2017-12-30T06:30:17" hostname="Siyus-MacBook-Pro-3.local" time="0.001">
   <properties/>
-  <testcase name="testNegativeParseSingleLine" classname="util.TransactionFileParserTest" time="0.001"/>
-  <testcase name="testPositveParseSingleLine" classname="util.TransactionFileParserTest" time="0.0"/>
+  <testcase name="testNegativeParseSingleLine" classname="util.TransactionFileParserTest" time="0.0"/>
+  <testcase name="testPositveParseSingleLine" classname="util.TransactionFileParserTest" time="0.001"/>
   <system-out><![CDATA[line '10d7ce2f43e35fa57d1bbf8b1e3, 2014-04-21T13:15:54' in error format, should be a comma separated string of three elements
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
