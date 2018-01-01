@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="core.TransactionValidatorTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2017-12-30T06:30:17" hostname="Siyus-MacBook-Pro-3.local" time="0.008">
+<testsuite name="core.TransactionValidatorTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2018-01-01T01:20:11" hostname="Siyus-MacBook-Pro-3.local" time="0.008">
   <properties/>
-  <testcase name="testDetectFraudCreditCards[0]" classname="core.TransactionValidatorTest" time="0.008"/>
+  <testcase name="testDetectFraudCreditCards[0]" classname="core.TransactionValidatorTest" time="0.007"/>
   <testcase name="testDetectFraudCreditCards[1]" classname="core.TransactionValidatorTest" time="0.0"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>

@@ -19,10 +19,10 @@ import static core.TransactionValidator.detectFraudCreditCards;
 @RunWith(Parameterized.class)
 public class TransactionValidatorTest {
 
-    List<Transaction> transactions;
-    LocalDate date;
-    BigDecimal threshold;
-    List<String> expectedFraudCards;
+    private List<Transaction> transactions;
+    private LocalDate date;
+    private BigDecimal threshold;
+    private List<String> expectedFraudCards;
 
     public TransactionValidatorTest(List<Transaction> transactions, LocalDate date,
                                     BigDecimal threshold, List<String> expectedFraudCards){
@@ -52,10 +52,8 @@ public class TransactionValidatorTest {
 
         List<Transaction> transactions = Arrays.asList(trans1, trans2, trans3, trans4, trans5, trans6, trans7,
                                                        trans8, trans9, trans10, trans11, trans12, trans13, trans14, trans15);
-
         List<String> expected1 = Arrays.asList("005","001", "003");
         List<String> expected2 = Arrays.asList("002", "008");
-
 
         return Arrays.asList(new Object[][]{
             {transactions, LocalDate.parse("2008-04-20"), new BigDecimal(100), expected1},
@@ -63,14 +61,10 @@ public class TransactionValidatorTest {
         );
     }
 
-
     @Test
     public void testDetectFraudCreditCards(){
 
         ListAssert.assertEquals(expectedFraudCards, detectFraudCreditCards(transactions,date,threshold));
     }
-
-
-
 
 }

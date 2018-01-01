@@ -8,6 +8,9 @@ import static util.FormatParser.parseToBigDecimal;
 import static util.FormatParser.parseToLocalDate;
 import static util.TransactionFileParser.parseFile;
 
+/**
+ * Take user inputs, parsing transactions' file by the given path, a specific date and a price threshold respectively.
+ */
 public class Main {
 
     public static void main(String[] args) {

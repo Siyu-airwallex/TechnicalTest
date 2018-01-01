@@ -17,9 +17,9 @@ public class TransactionValidator {
         Map<String, BigDecimal> sumByCard = new HashMap<>();
         for(Transaction tran : trans){
             if(tran.getTimestamp().toLocalDate().equals(date)){
-               String card = tran.getHashedCardNumber();
-               BigDecimal currSum = sumByCard.getOrDefault(card, new BigDecimal("0"));
-               sumByCard.put(card, currSum.add(tran.getPaymentAmount()));
+               String cardNumber = tran.getHashedCardNumber();
+               BigDecimal currSum = sumByCard.getOrDefault(cardNumber, new BigDecimal("0"));
+               sumByCard.put(cardNumber, currSum.add(tran.getPaymentAmount()));
             }
         }
         return sumByCard.entrySet().stream()

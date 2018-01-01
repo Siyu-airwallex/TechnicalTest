@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="util.TransactionFileParserTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2017-12-30T06:30:17" hostname="Siyus-MacBook-Pro-3.local" time="0.001">
+<testsuite name="util.TransactionFileParserTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2018-01-01T01:20:11" hostname="Siyus-MacBook-Pro-3.local" time="0.001">
   <properties/>
   <testcase name="testNegativeParseSingleLine" classname="util.TransactionFileParserTest" time="0.0"/>
   <testcase name="testPositveParseSingleLine" classname="util.TransactionFileParserTest" time="0.001"/>
