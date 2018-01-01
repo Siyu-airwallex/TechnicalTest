@@ -10,6 +10,7 @@ import static util.TransactionFileParser.parseFile;
 
 /**
  * Take user inputs, parsing transactions' file by the given path, a specific date and a price threshold respectively.
+ * The program will print out fraud hashed credit card numbers.
  */
 public class Main {
 
